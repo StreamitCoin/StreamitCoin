@@ -16,11 +16,12 @@ Installation of libraries (using root user):
     apt-get install -y libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
     apt-get install -y libdb4.8-dev libdb4.8++-dev
 
-for Ubunru 18.04
+    For Ubunru 18.04 type:
     apt-get install -y libssl1.0-dev
 
-for Ubunru 16.04
+    For Ubunru 16.04 type:
     apt-get install -y libssl-dev
+
 
 Cloning the repository and compiling (use any user with the sudo group):
 
