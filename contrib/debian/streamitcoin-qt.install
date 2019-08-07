@@ -1,0 +1,6 @@
+usr/local/bin/streamitcoin-qt usr/bin
+share/pixmaps/streamitcoin32.xpm usr/share/pixmaps
+share/pixmaps/streamitcoin16.xpm usr/share/pixmaps
+share/pixmaps/streamitcoin128.png usr/share/pixmaps
+debian/streamitcoin-qt.desktop usr/share/applications
+debian/streamitcoin-qt.protocol usr/share/kde4/services/

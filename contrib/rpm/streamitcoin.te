@@ -1,0 +1,81 @@
+policy_module(streamitcoin, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type streamitcoin_t;
+type streamitcoin_exec_t;
+init_daemon_domain(streamitcoin_t, streamitcoin_exec_t)
+
+permissive streamitcoin_t;
+
+type streamitcoin_initrc_exec_t;
+init_script_file(streamitcoin_initrc_exec_t)
+
+type streamitcoin_conf_t;
+files_type(streamitcoin_conf_t)
+
+type streamitcoin_var_lib_t;
+files_type(streamitcoin_var_lib_t)
+
+type streamitcoin_var_run_t;
+files_type(streamitcoin_var_run_t)
+
+type streamitcoin_port_t;
+corenet_port(streamitcoin_port_t)
+
+########################################
+#
+# streamitcoin local policy
+#
+allow streamitcoin_t self:process { fork };
+
+allow streamitcoin_t self:fifo_file rw_fifo_file_perms;
+allow streamitcoin_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(streamitcoin_t, streamitcoin_conf_t, streamitcoin_conf_t)
+manage_files_pattern(streamitcoin_t, streamitcoin_conf_t, streamitcoin_conf_t)
+
+manage_dirs_pattern(streamitcoin_t, streamitcoin_var_lib_t, streamitcoin_var_lib_t)
+manage_files_pattern(streamitcoin_t, streamitcoin_var_lib_t, streamitcoin_var_lib_t)
+files_var_lib_filetrans(streamitcoin_t, streamitcoin_var_lib_t, { dir file })
+
+manage_dirs_pattern(streamitcoin_t, streamitcoin_var_run_t, streamitcoin_var_run_t)
+manage_files_pattern(streamitcoin_t, streamitcoin_var_run_t, streamitcoin_var_run_t)
+
+sysnet_dns_name_resolve(streamitcoin_t)
+corenet_all_recvfrom_unlabeled(streamitcoin_t)
+
+allow streamitcoin_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(streamitcoin_t)
+corenet_tcp_sendrecv_generic_node(streamitcoin_t)
+corenet_tcp_sendrecv_all_ports(streamitcoin_t)
+corenet_tcp_bind_generic_node(streamitcoin_t)
+
+gen_require(`
+    type streamitcoin_port_t;
+')
+allow streamitcoin_t streamitcoin_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type streamitcoin_port_t;
+')
+allow streamitcoin_t streamitcoin_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(streamitcoin_t)
+
+files_read_etc_files(streamitcoin_t)
+
+miscfiles_read_localization(streamitcoin_t)
+
+sysnet_dns_name_resolve(streamitcoin_t)
+
+allow streamitcoin_t streamitcoin_exec_t:file execute_no_trans;
+allow streamitcoin_t self:process setsched;
+corecmd_exec_ls(streamitcoin_t)
+corenet_tcp_connect_http_port(streamitcoin_t)
+dev_read_urand(streamitcoin_t)
+fs_getattr_xattr_fs(streamitcoin_t)
+kernel_read_system_state(streamitcoin_t)

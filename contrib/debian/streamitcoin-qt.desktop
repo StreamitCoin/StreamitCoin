@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=StreamitCoin Core
+Comment=StreamitCoin P2P Cryptocurrency
+Comment[fr]=StreamitCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=StreamitCoin, eşten eşe kriptografik sanal para birimi
+Exec=streamitcoin-qt %u
+Terminal=false
+Type=Application
+Icon=streamitcoin128
+MimeType=x-scheme-handler/streamitcoin;
+Categories=Office;Finance;
+StartupWMClass=Streamitcoin-qt

@@ -1,0 +1,3 @@
+usr/local/bin/streamitcoind usr/bin
+usr/local/bin/streamitcoin-cli usr/bin
+debian/examples/streamitcoin.conf etc/streamitcoin
