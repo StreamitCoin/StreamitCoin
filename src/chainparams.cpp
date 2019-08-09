@@ -1,7 +1,8 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2018 The PIVX developers// Copyright (c) 2019 The StreamitCoin developers
+// Copyright (c) 2015-2018 The PIVX developers
+// Copyright (c) 2019 The StreamitCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -178,8 +179,8 @@ public:
         assert(hashGenesisBlock == uint256("00000f8c48f0342f379f11b10f73ff5d03612a269675f1d4f10fbfc6dc260ad2"));
         assert(genesis.hashMerkleRoot == uint256("19a9b7977354e734133d08b4ec2505e4770b22adaa4ecd5af46c7aedb02884a7"));
 
-        vSeeds.push_back(CDNSSeedData("seed1.streamitcoin.com", "seed1.streamitcoin.com"));    // Primary DNS Seeder
-        vSeeds.push_back(CDNSSeedData("seed2.streamitcoin.com", "seed2.streamitcoin.com"));    // Secondary DNS Seeder
+        vSeeds.push_back(CDNSSeedData("seed2", "seed1.explorerstreamit.com"));    // Primary DNS Seeder
+        vSeeds.push_back(CDNSSeedData("seed2", "seed2.explorerstreamit.com"));    // Secondary DNS Seeder
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 63);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
