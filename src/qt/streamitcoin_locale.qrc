@@ -1,0 +1,37 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/streamitcoin_bg.qm</file>
+        <file alias="ca">locale/streamitcoin_ca.qm</file>
+        <file alias="cs">locale/streamitcoin_cs.qm</file>
+        <file alias="da">locale/streamitcoin_da.qm</file>
+        <file alias="de">locale/streamitcoin_de.qm</file>
+        <file alias="en">locale/streamitcoin_en.qm</file>
+        <file alias="en_GB">locale/streamitcoin_en_GB.qm</file>
+        <file alias="en_US">locale/streamitcoin_en_US.qm</file>
+        <file alias="eo">locale/streamitcoin_eo.qm</file>
+        <file alias="es">locale/streamitcoin_es.qm</file>
+        <file alias="es_ES">locale/streamitcoin_es_ES.qm</file>
+        <file alias="fi">locale/streamitcoin_fi.qm</file>
+        <file alias="fr_FR">locale/streamitcoin_fr_FR.qm</file>
+        <file alias="hi_IN">locale/streamitcoin_hi_IN.qm</file>
+        <file alias="hr">locale/streamitcoin_hr.qm</file>
+        <file alias="hr_HR">locale/streamitcoin_hr_HR.qm</file>
+        <file alias="it">locale/streamitcoin_it.qm</file>
+        <file alias="ja">locale/streamitcoin_ja.qm</file>
+        <file alias="ko_KR">locale/streamitcoin_ko_KR.qm</file>
+        <file alias="lt_LT">locale/streamitcoin_lt_LT.qm</file>
+        <file alias="nl">locale/streamitcoin_nl.qm</file>
+        <file alias="pl">locale/streamitcoin_pl.qm</file>
+        <file alias="pt">locale/streamitcoin_pt.qm</file>
+        <file alias="pt_BR">locale/streamitcoin_pt_BR.qm</file>
+        <file alias="ro_RO">locale/streamitcoin_ro_RO.qm</file>
+        <file alias="ru">locale/streamitcoin_ru.qm</file>
+        <file alias="sk">locale/streamitcoin_sk.qm</file>
+        <file alias="sv">locale/streamitcoin_sv.qm</file>
+        <file alias="tr">locale/streamitcoin_tr.qm</file>
+        <file alias="uk">locale/streamitcoin_uk.qm</file>
+        <file alias="vi">locale/streamitcoin_vi.qm</file>
+        <file alias="zh_CN">locale/streamitcoin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/streamitcoin_zh_TW.qm</file>
+    </qresource>
+</RCC>
